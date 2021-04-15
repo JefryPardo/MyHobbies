@@ -1,0 +1,11 @@
+<h1 class="animated fadeIn fast">Biblioteca.</h1>
+<hr>
+
+<div class="card-columns animated fadeIn fast">
+    <div *ngFor="let h of tarjetas">
+        <div *ngIf="h.tipo == 'book'">
+            <app-info-tarjeta [tarjeta]="h" [index]="h.idx"></app-info-tarjeta>
+        </div>
+    </div>
+
+</div>

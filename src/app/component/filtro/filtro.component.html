@@ -1,0 +1,14 @@
+<h1 class="animated fadeIn fast">Buscador: <small>{{termino}}</small> </h1>
+<hr>
+
+
+<div class="row" *ngIf="tarjeta.length==0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el término: {{ termino }}
+        </div>
+    </div>
+</div>
+<div class="card-columns animated fadeIn fast">
+    <app-info-tarjeta [tarjeta]="h" [index]="h.idx" *ngFor="let h of tarjeta"></app-info-tarjeta>
+</div>

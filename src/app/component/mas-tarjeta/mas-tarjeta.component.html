@@ -1,0 +1,19 @@
+<h1>{{tarjeta.nombre | uppercase}}
+    <h6><small class="text-muted">{{tarjeta.aparicion | date:'y'}}</small></h6>
+</h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img class="card-img-top" [src]="tarjeta.img" [alt]="tarjeta.nombre">
+        <hr>
+        <a [routerLink]="['/home']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{tarjeta.nombre}}</h3>
+        <hr>
+        <p>
+            {{tarjeta.bio}}
+        </p>
+    </div>
+</div>
